@@ -1,23 +1,32 @@
-#include "main.h"
 #include <stdio.h>
 
-/**
- * print_number - Prints an intergar.
- * @n: input integer.
- * Return: no return.
- */
 void print_number(int n)
 {
-	unsigned int k=n;
-	
-	if n(n < 0)
-	{
-		n *= -1;
-		k = n;
-		_punchar('-');
-	}
-	K /= 10;
-	if (k != 0)
-	print_number(k);
-	_putchar((unsigned int) n % 10 + '0');
-	]
+    if (n < 0)
+    {
+        putchar('-');
+        n = -n;
+    }
+
+    if (n / 10)
+        print_number(n / 10);
+
+    putchar(n % 10 + '0');
+}
+
+int main(void)
+{
+    print_number(98);
+    putchar('\n');
+    print_number(402);
+    putchar('\n');
+    print_number(1024);
+    putchar('\n');
+    print_number(0);
+    putchar('\n');
+    print_number(-98);
+    putchar('\n');
+    
+    return 0;
+}
+
