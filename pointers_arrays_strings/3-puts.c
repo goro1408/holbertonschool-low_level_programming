@@ -1,19 +1,24 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _puts - prints string
- * @str: printed string
+ * _puts - entry point
+ *
+ * Description: tu connais flemme un peu
+ *@str: poiteur de la chaine a compter
  * Return: void
  */
 
 void _puts(char *str)
-
 {
 
-	for (; *str != '\0'; str++)
-	{
-		_putchar(*str);
-	}
-	_putchar('\n');
+	int n = 0;
 
+	while (str[n])
+	{
+		_putchar(str[n]);
+		++n;
+	}
+
+	_putchar('\n');
 }
