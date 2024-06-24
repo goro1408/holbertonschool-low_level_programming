@@ -1,30 +1,23 @@
-#include "main.h"
-#include <unistd.h>
-
-/**
- * print_rev - entry point
- *
- * Description: tu connais flemme un peu
- *@str: poiteur de la chaine a compter
- * Return: la longueur de la chaine
+/*
+ * File: 4-rev_array.c
+ * Auth: Brennan D Baraban
  */
 
-void print_rev(char *str)
+#include "main.h"
+
+/**
+ * reverse_array - Reverses the content of an array of integers.
+ * @a: The array of integers to be reversed.
+ * @n: The number of elements in the array.
+ */
+void reverse_array(int *a, int n)
 {
+	int tmp, index;
 
-	int c = 0;
-
-	int n = 0;
-
-	while (str[c])
+	for (index = n - 1; index >= n / 2; index--)
 	{
-		++c;
+		tmp = a[n - 1 - index];
+		a[n - 1 - index] = a[index];
+		a[index] = tmp;
 	}
-
-	for (n = c - 1; n >= 0; n--)
-	{
-		_putchar(str[n]);
-	}
-
-	putchar('\n');
 }
